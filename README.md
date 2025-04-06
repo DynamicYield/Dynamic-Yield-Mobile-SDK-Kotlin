@@ -24,7 +24,7 @@ In you GitHub account:
 
 1. If you don't have a user, register to Github.
 2. Go to **Settings › Developer Settings › [Personal Access Tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic) ›[Generate new token](https://github.com/settings/tokens)**
-3. Make sure you select the following scopes: (" `write:packages`", "`read:packages`") and Generate a token
+3. Make sure you select the following scopes: ("`read:packages`") and Generate a token
 4. Make sure to**copy your new personal access token. You won't be able to see it again!** Your only option if it's lost is to generate a new key.
 
 ## Installing the Kotlin SDK
@@ -38,13 +38,13 @@ Include the following dependency in your project, with the specific SDK version 
 
 ```kotlin
 dependencies {
-    implementation("com.dynamicyield:dy-sdk:<VERSION>")
+    implementation("com.dynamicyield:dy-android-sdk:<VERSION>")
 }
 ```
 
 ```java Groovy
 dependencies {
-    implementation 'com.dynamicyield:dy-sdk:<VERSION>'
+    implementation 'com.dynamicyield:dy-android-sdk:<VERSION>'
 }
 ```
 
@@ -73,7 +73,7 @@ repositories {
             file("gradle.properties").inputStream().use {
                 properties.load(it)
             }
-            url = uri("https://maven.pkg.github.com/DynamicYield/DY-Android-SDK")
+            url = uri("https://maven.pkg.github.com/DynamicYield/Dynamic-Yield-Mobile-SDK-Kotlin")
             credentials {
                 username =
                     System.getenv("GITHUB_USERNAME") ?: properties.getProperty("github.username")
