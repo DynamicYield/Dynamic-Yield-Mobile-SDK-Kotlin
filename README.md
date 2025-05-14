@@ -38,13 +38,13 @@ Include the following dependency in your project, with the specific SDK version 
 
 ```kotlin
 dependencies {
-    implementation("com.dynamicyield:dy-android-sdk:<VERSION>")
+    implementation("com.dynamicyield:sdk:<VERSION>")
 }
 ```
 
 ```java Groovy
 dependencies {
-    implementation 'com.dynamicyield:dy-android-sdk:<VERSION>'
+    implementation 'com.dynamicyield:sdk:<VERSION>'
 }
 ```
 
@@ -91,7 +91,7 @@ repositories {
         def properties = new Properties()
         file("gradle.properties").withInputStream { properties.load(it) }
 
-        url = uri("https://maven.pkg.github.com/DynamicYield/DY-Android-SDK")
+        url = uri("https://maven.pkg.github.com/DynamicYield/Dynamic-Yield-Mobile-SDK-Kotlin")
         credentials {
             username = System.getenv("GITHUB_USERNAME") ?: properties.getProperty("github.username")
             password = System.getenv("GITHUB_TOKEN") ?: properties.getProperty("github.token")
